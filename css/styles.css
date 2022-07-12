@@ -1,0 +1,466 @@
+:root {
+  /* Главное оформление - темный текст на светлом фоне */
+  /* Альтернативное (инверсное) оформление - светлый текст на темном фоне */
+
+  /* Цвета фона: */
+
+  /* #FFFFFF Хедер */
+  /* #FFFFFF Особенности, чем занимаемся, примеры работ */
+  /* --primary-background-color: #ffffff; */
+
+  /* #2F303A Герой */
+  /* #2F303A Футер */
+  --dark-background-color: #2f303a;
+
+  /* #F5F4FA Наша команда */
+
+  /* Цвета текста: */
+
+  /* #2196F3, #000000 лого в хедере*/
+  --logo-color: #000000;
+
+  /* #ececec */
+  --header-border-color: #ececec;
+
+  /* #2196F3, #FFFFFF лого в футере*/
+
+  /* #2196F3 - акцент*/
+  --accent-color: #2196f3;
+
+  /* #212121 - nav в хедере*/
+  /* #212121 - заголовок в разделах */
+  --title-color: #212121;
+
+  /* #757575 - контакты в хедере */
+  /* #757575 - абзацы */
+  --primary-text-color: #757575;
+
+  --member-item-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  /* #FFFFFF - заголовок и кнопка в герое */
+  /* #FFFFFF - адрес в футере */
+  --white-color: #ffffff;
+
+  /* rgba(255, 255, 255, 0.6) - контакты в футере */
+  --address-contacts-color: rgb(255 255 255 / 0.6);
+
+  /* #188ce8 - акцент кнопки в герое */
+  --hero-button-accent-background-color: #188ce8;
+  --hero-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  /* #F5F4FA - основной цвет фона кнопки в портфолио, фон секции наша команда */
+  --portfolio-button-background-color: #f5f4fa;
+  --team-section-background-color: #f5f4fa;
+
+  --portfolio-accent-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  /* #eeeeee */
+  --portfolio-container-border-color: #eeeeee;
+
+  /* Зазор в сетке между portfolio-item */
+  --item-gap: 30px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  color: var(--primary-text-color);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section.no-bottom-padding {
+  padding-bottom: 0;
+}
+
+.section-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+  text-align: center;
+}
+
+/* Хедер */
+
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+}
+
+.contact-list {
+  display: flex;
+  margin-left: auto;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/*  Логотип */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: var(--logo-color);
+  text-decoration: none;
+}
+
+.logo.inverse {
+  color: var(--white-color);
+}
+
+.logo-accent {
+  color: var(--accent-color);
+}
+
+.nav-list {
+  margin-left: 93px;
+
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--title-color);
+}
+
+.nav-list .link,
+.contact-list .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+}
+
+.nav-list .item:nth-child(n + 2),
+.contact-list .item:nth-child(n + 2) {
+  margin-left: 50px;
+}
+
+.nav-list .link:hover,
+.nav-list .link:focus,
+.nav-list .link.current,
+.contact-list .link:hover,
+.contact.list .link:focus {
+  color: var(--accent-color);
+}
+
+/* Герой */
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+
+  background-color: var(--dark-background-color);
+}
+.hero-title {
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  border-style: none;
+  box-shadow: var(--hero-button-shadow);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+
+  cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--hero-button-accent-background-color);
+}
+
+/* Особенности */
+
+.features {
+  display: flex;
+  margin-left: calc(-1 * var(--item-gap));
+}
+
+.feature-item {
+  margin-left: var(--item-gap);
+  flex-basis: calc(100% - 3 * var(--item-gap));
+}
+
+.feature-title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+  text-transform: uppercase;
+}
+
+.feature-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* Чем мы занимаемся */
+
+.area-list {
+  display: flex;
+}
+
+.area-list .item:nth-child(n + 2) {
+  margin-left: 30px;
+}
+/* Наша команда */
+
+.team-section {
+  background-color: var(--team-section-background-color);
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--item-gap));
+}
+
+.member-item {
+  flex-basis: calc(100% / 4 - var(--item-gap));
+  margin-left: var(--item-gap);
+
+  text-align: center;
+  background-color: var(--white-color);
+
+  box-shadow: var(--member-item-shadow);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.member-item-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* .member-item:not(:first-child) */
+.member-item:nth-child(n + 2) {
+  margin-left: auto;
+}
+
+.member-title,
+.member-description {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.member-title {
+  font-weight: 500;
+
+  color: var(--title-color);
+}
+
+.member-description {
+  margin-top: 10px;
+}
+
+/* Портфолио */
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+/* Наши работы */
+.portfolio-button {
+  display: block;
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+  background-color: var(--portfolio-button-background-color);
+
+  cursor: pointer;
+
+  border-style: none;
+  border-radius: 4px;
+}
+
+.portfolio-filter .item:nth-child(n + 2) {
+  margin-left: 8px;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus,
+.portfolio-button.selected {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: var(--portfolio-accent-button-shadow);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--item-gap));
+  margin-left: calc(-1 * var(--item-gap));
+}
+
+.portfolio-list > .item {
+  flex-basis: calc(100% / 3 - var(--item-gap));
+  margin-top: var(--item-gap);
+  margin-left: var(--item-gap);
+}
+
+/*
+.portfolio-list > .item {
+  width: calc((100% - 2 * 30px) / 3);
+}
+
+.portfolio-list > .item:not(:nth-child(3n + 1)) {
+  margin-left: 30px;
+}
+
+.portfolio-list > .item:not(:nth-child(-n + 3)) {
+  margin-top: 30px;
+}
+*/
+
+.portfolio-list .image {
+  display: block;
+}
+
+.portfolio-container {
+  padding: 20px 24px;
+  border: 1px solid var(--portfolio-container-border-color);
+  border-top: none;
+}
+
+.portfolio-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--title-color);
+}
+
+.portfolio-type {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+}
+/* Футер */
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--dark-background-color);
+}
+
+.footer .address {
+  margin-top: 20px;
+}
+
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.address-location {
+  color: var(--white-color);
+}
+
+.address-contacts {
+  margin-top: 9px;
+  color: var(--address-contacts-color);
+}
+
+.address-contacts > li:not(:first-child) {
+  margin-top: 9px;
+}
