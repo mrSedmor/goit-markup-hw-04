@@ -424,7 +424,7 @@ ul {
 }
 
 .clients-link:hover,
-.clients-link:active {
+.clients-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -533,7 +533,7 @@ ul {
 }
 
 .portfolio-link:hover,
-.portfolio-link:active {
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   /* transform: scale(1.05); */
   /* transition-property: transform box-shadow; */
@@ -617,6 +617,6 @@ ul {
 }
 
 .footer-social-link:hover,
-.footer-social-link:active {
+.footer-social-link:focus {
   background-color: var(--accent-color);
 }
