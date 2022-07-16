@@ -18,21 +18,33 @@
   <body>
     <!-- Хэдер скопирован из index.html -->
     <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a href="./index.html" class="logo"><span class="logo-accent">Web</span>Studio</a>
-          <ul class="nav-list list">
-            <li class="item"><a href="./index.html" class="link">Студия</a></li>
-            <li class="item"><a href="./portfolio.html" class="link current">Портфолио</a></li>
-            <li class="item"><a href="./contacts.html" class="link">Контакты</a></li>
+      <div class="container header-container">
+        <nav class="header-nav">
+          <a href="./index.html" class="logo">Web<span class="logo-header">Studio</span></a>
+          <ul class="header-nav-list">
+            <li class="header-nav-item"><a href="./index.html" class="link header-nav-link">Студия</a></li>
+            <li class="header-nav-item">
+              <a href="./portfolio.html" class="link header-nav-link current">Портфолио</a>
+            </li>
+            <li class="header-nav-item"><a href="./contacts.html" class="link header-nav-link">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="contact-list list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+        <ul class="header-contact-list">
+          <li class="header-contact-item">
+            <a href="mailto:info@devstudio.com" class="link header-contact-link inside-wrapper">
+              <svg class="icon header-contact-icon" width="16" height="12">
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+          <li class="header-contact-item">
+            <a href="tel:+380961111111" class="link header-contact-link">
+              <svg class="icon header-contact-icon" width="10" height="16">
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
           </li>
         </ul>
       </div>
@@ -197,20 +209,56 @@
 
     <!-- Футер скопирован из index.html -->
     <footer class="footer">
-      <div class="container">
-        <a href="./index.html" class="logo inverse link"> <span class="logo-accent">Web</span>Studio </a>
-        <!-- Адрес -->
-        <address class="address">
-          <p class="address-location">г. Киев, пр-т Леси Украинки, 26</p>
-          <ul class="address-contacts list">
-            <li>
-              <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="container footer-container">
+        <div class="footer-address-wrapper">
+          <a href="./index.html" class="logo">Web<span class="logo-footer">Studio</span></a>
+          <!-- Адрес -->
+          <address class="footer-address">
+            <p class="footer-location">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="footer-contact-list">
+              <li class="footer-contact-item">
+                <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+              </li>
+              <li class="footer-contact-item">
+                <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-social-wrapper">
+          <h3 class="footer-social-title">Присоединяйтесь</h3>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a href="" class="footer-social-link link">
+                <svg width="20" height="20" class="icon footer-social-icon">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li>
-              <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            <li class="footer-social-item">
+              <a href="" class="footer-social-link link">
+                <svg width="20" height="20" class="icon footer-social-icon">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a href="" class="footer-social-link link">
+                <svg width="20" height="20" class="icon footer-social-icon">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a href="" class="footer-social-link link">
+                <svg width="20" height="20" class="icon footer-social-icon">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>
