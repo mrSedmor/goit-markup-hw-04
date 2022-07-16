@@ -435,14 +435,14 @@ ul {
 }
 
 /* Портфолио */
-.portfolio-filter {
+.portfolio-filter-list {
   display: flex;
   justify-content: center;
 
   margin-bottom: 50px;
 }
 /* Наши работы */
-.portfolio-button {
+.portfolio-filter-button {
   display: block;
   padding: 6px 22px;
 
@@ -461,13 +461,13 @@ ul {
   border-radius: 4px;
 }
 
-.portfolio-filter .item:nth-child(n + 2) {
+.portfolio-filter-item:nth-child(n + 2) {
   margin-left: 8px;
 }
 
-.portfolio-button:hover,
-.portfolio-button:focus,
-.portfolio-button.selected {
+.portfolio-filter-button:hover,
+.portfolio-filter-button:focus,
+.portfolio-filter-button.selected {
   color: var(--white-color);
   background-color: var(--accent-color);
   box-shadow: var(--portfolio-accent-button-shadow);
@@ -481,27 +481,27 @@ ul {
   margin-left: calc(-1 * var(--item-gap));
 }
 
-.portfolio-list > .item {
+.portfolio-item {
   flex-basis: calc(100% / 3 - var(--item-gap));
   margin-top: var(--item-gap);
   margin-left: var(--item-gap);
 }
 
 /*
-.portfolio-list > .item {
+.portfolio-item {
   width: calc((100% - 2 * 30px) / 3);
 }
 
-.portfolio-list > .item:not(:nth-child(3n + 1)) {
+.portfolio-item:not(:nth-child(3n + 1)) {
   margin-left: 30px;
 }
 
-.portfolio-list > .item:not(:nth-child(-n + 3)) {
+.portfolio-item:not(:nth-child(-n + 3)) {
   margin-top: 30px;
 }
 */
 
-.portfolio-list .image {
+.portfolio-image {
   display: block;
 }
 
@@ -526,6 +526,18 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+
+.portfolio-link {
+  display: block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  /* transform: scale(1.05); */
+  /* transition-property: transform box-shadow; */
+  /* transition-duration: 400ms; */
 }
 /* Футер */
 
