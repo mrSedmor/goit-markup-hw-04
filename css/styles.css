@@ -124,8 +124,8 @@ ul {
   fill: currentColor;
 }
 
-.accent-stroke {
-  fill: var(--accent-color);
+.image {
+  display: block;
 }
 
 .section-title {
@@ -228,6 +228,8 @@ ul {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  margin-inline: auto;
   text-align: center;
 
   background-color: var(--dark-background-color);
@@ -308,10 +310,11 @@ ul {
 }
 
 .features-icon-container {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
   margin-bottom: 30px;
-  text-align: center;
   color: var(--title-color);
   background-color: var(--team-section-background-color);
   border-radius: 4px;
@@ -390,6 +393,7 @@ ul {
   align-items: center;
   width: 44px;
   height: 44px;
+  color: #afb1b8;
   border-radius: 50%;
 }
 
@@ -404,7 +408,7 @@ ul {
 
 .clients-list {
   display: flex;
-  margin-left: var(-1 * var(--item-gap));
+  margin-left: calc(-1 * var(--item-gap));
 }
 
 .clients-item {
@@ -415,6 +419,8 @@ ul {
 
 .clients-link {
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   border-width: 1px;
   border-style: solid;
@@ -427,11 +433,6 @@ ul {
 .clients-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
-}
-
-.clients-logo {
-  margin: auto;
-  fill: currentColor;
 }
 
 /* Портфолио */
@@ -501,10 +502,6 @@ ul {
 }
 */
 
-.portfolio-image {
-  display: block;
-}
-
 .portfolio-container {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-container-border-color);
@@ -550,6 +547,7 @@ ul {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-address {
@@ -575,7 +573,6 @@ ul {
 
 .footer-social-wrapper {
   margin-left: 70px;
-  padding-top: 12px;
 }
 
 .footer-social-title {
